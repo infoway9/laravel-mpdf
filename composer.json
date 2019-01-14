@@ -1,0 +1,37 @@
+{
+    "name": "infoway9/laravel-mpdf",
+    "description": "Generate PDF document in Laravel framework with this mPDF wrapper.",
+    "keywords": ["mpdf", "pdf", "laravel", "php", "php mpdf", "laravel pdf"],
+    "authors": [{
+            "name": "Infoway",
+			"email":"iwmarketing@infoway.us"
+        }],
+    "license": "MIT",
+    "scripts": {
+        "test": "phpunit --colors=always"
+    },
+    "require": {
+        "php": ">=5.6",
+        "mpdf/mpdf": "^7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Infoway\\mPdf\\": "src/LaravelPdf"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Infoway\\mPdf\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Infoway\\mPdf\\mPdfServiceProvider"
+            ],
+            "aliases": {
+                "PDF": "Infoway\\mPdf\\Facades\\Pdf"
+            }
+        }
+    }
+}
