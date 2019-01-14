@@ -12,7 +12,7 @@ class Pdf extends BaseFacade {
      * @return string
      */
     protected static function getFacadeAccessor() {
-        return 'skg.mpdf.LaravelMpdfWrapper';
+        return 'Infoway.mpdf.LaravelMpdfWrapper';
     }
 
 }

@@ -17,7 +17,7 @@ class mPdfServiceProvider extends ServiceProvider {
         $this->mergeConfigFrom(
                 __DIR__ . '/../config/pdf.php', 'pdf'
         );
-        $this->app->bind('skg.mpdf.LaravelMpdfWrapper', function($app) {
+        $this->app->bind('Infoway.mpdf.LaravelMpdfWrapper', function($app) {
             return new LaravelMpdfWrapper();
         });
     }
